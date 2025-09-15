@@ -1,0 +1,34 @@
+<widget>
+    <datasets>
+        <dataset sID="oOk6hune1mnl" sName="Смирнова_задание_3" sSource="smirnova_zadanie_3_2741000002921" sType="user" isExtended="0" isDependent="0" isDistinct="0">
+            <fields>
+                <r sID="VyAUdcPRmyWM" sName="operator" sType="column" isHidden="0" sExp="operator" sColumnType="string"></r>
+                <r sID="rWNxUnxZH825" sName="users" sType="column" isHidden="0" sExp="users" sColumnType="number" sAggregate="sum"></r>
+            </fields>
+            <sort>
+                <r sFieldID="VyAUdcPRmyWM" sType="ASC"></r>
+            </sort>
+        </dataset>
+        <dataset sID="aNaBRXbEy9av" sName="Смирнова_задание_3_САНКИ" sSource="smirnova_zadanie_3_sanki_2741000002977" sType="user" isExtended="0" isDependent="0" isDistinct="0">
+            <fields>
+                <r sID="cgTf3tFOiSIQ" sName="column1" sType="column" isHidden="0" sExp="column1" sColumnType="string"></r>
+                <r sID="T74bwlVrN2Mk" sName="column2" sType="column" isHidden="0" sExp="column2" sColumnType="string"></r>
+                <r sID="Bs9sfAuWz11a" sName="column3" sType="column" isHidden="0" sExp="column3" sColumnType="number" sAggregate="sum"></r>
+            </fields>
+            <conditions>
+                <r sOperator="=" sLeftType="column" sLeftExp="date" sRightType="param" sRightExp="date" isDisabled="0"></r>
+                <r sOperator="in" sLeftType="column" sLeftExp="region" sRightType="param" sRightExp="region" isDisabled="0"></r>
+            </conditions>
+        </dataset>
+    </datasets>
+    <visuals>
+        <widgetElements sDataSetID="oOk6hune1mnl">
+            <onWholeClick></onWholeClick>
+        </widgetElements>
+        <sankey sDataSetID="aNaBRXbEy9av" sFactorFieldID="cgTf3tFOiSIQ" sTotalFactorFieldID="T74bwlVrN2Mk" sValueFieldID="Bs9sfAuWz11a" nPalette="748124" sMeasure="">
+            <style sName="Beeline" sColor="#ffd319"></style>
+            <style sName="Megafon" sColor="#007f4e"></style>
+            <style sName="МТC" sColor="#cc0042"></style>
+        </sankey>
+    </visuals>
+</widget>
