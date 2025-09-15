@@ -3,6 +3,7 @@
 [**1. Проект "Отчет по рекламе Ozon"**](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/Проект%20%22Отчет%20по%20рекламе%20Ozon%22)
   - Выгрузка данных по API с использованием JavaScript;
   - обработка данных с помощью PostgreSQL;
+  - расчет маркетинговых метрик (ДРР, CPO, CPM, CPC, ROMI) и конверсий воронки продаж (CTR, CR1, CR2);
   - построеие дэшборда в BI платформе Navigator.
 
 [**2. Разработка дэшбордов**](https://github.com/Polina-Smirnova22/Dashboards)
