@@ -11,7 +11,8 @@
   - Операторы сотовой связи [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Операторы%20сотовой%20связи) ;
   - Складской учет [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Складской%20учет) ;
   - Управление рабочим временем [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Управление%20рабочим%20временем) ;
-  - Статистика по онлайн-образованию.
+  - Онлайн-образование [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Управление%20рабочим%20временем) ;
+  - Рекламные кампании Ozon [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Управление%20рабочим%20временем) .
 
 [**3. SQL-анализ (ABC-XYZ) для канцелярских товаров**](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/SQL-анализ%20(ABC-XYZ)%20для%20канцелярских%20товаров)
   - Построение ER-модели базы данных;
