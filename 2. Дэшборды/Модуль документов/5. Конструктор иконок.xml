@@ -1,0 +1,222 @@
+<widget>
+    <datasets>
+        <dataset sID="egJuFcTglHlU" sName="NavSQL запрос" sSource="NAVSQL_LOCAL" sType="navsql" isExtended="0" isDependent="0" isDistinct="0">
+            <fields>
+                <r sID="gQESFpgiOW5L" sName="id_image" sType="column" isHidden="0" sExp="id_image" sColumnType="string"></r>
+                <r sID="vEmgcPPeZj6K" sName="name_image" sType="column" isHidden="0" sExp="name_image" sColumnType="string"></r>
+                <r sID="aX1cV3TEtyLY" sName="share_to_widht_container" sType="column" isHidden="0" sExp="share_to_widht_container" sColumnType="number"></r>
+                <r sID="deY6TA6x3hIg" sName="sort" sType="column" isHidden="0" sExp="sort" sColumnType="number"></r>
+                <r sID="kw6xNfItcbIq" sName="color" sType="column" isHidden="0" sExp="color" sColumnType="string"></r>
+            </fields>
+            <navsql>
+                <query>
+SELECT
+    id_image,
+    name_image,
+    1.000000 / (COUNT(*) OVER() + 1) AS Share_to_widht_container,
+    ROW_NUMBER() OVER() AS sort,
+    CASE
+        WHEN name_image = [**tab1]
+        THEN '#7C95AB70'
+        ELSE null
+        END AS color
+FROM (
+    VALUES
+    ('1021472','Главная'),
+    ('1021473', 'Архив')
+) AS t (id_image, name_image)</query>
+            </navsql>
+        </dataset>
+    </datasets>
+    <visuals>
+        <widgetElements></widgetElements>
+        <designer>
+            <variableGroup>
+                <variable sName="all_w" sValue="=canvas_width&#xA;"></variable>
+                <variable sName="all_h" sValue="=canvas_height"></variable>
+                <variable sName="size_icon" sValue="=60&#xA;"></variable>
+                <variable sName="indent_inner" sValue="=100"></variable>
+            </variableGroup>
+            <item>
+                <stack sHAlign="left" sVAlign="top" sPivot="middle" sName="Тест число" isHidden="1">
+                    <item>
+                        <number nScaleType="none" sFontSize="default" nValue="=egJuFcTglHlU.deY6TA6x3hIg" sTextColor="#B160B3"></number>
+                    </item>
+                    <item>
+                        <text sFontSize="default" sText="=egJuFcTglHlU.vEmgcPPeZj6K"></text>
+                    </item>
+                </stack>
+            </item>
+            <item>
+                <stack sHAlign="left" sVAlign="bottom" sPivot="middle" sName="general_element">
+                    <item>
+                        <figure sFigureType="rect" nStrokeWidth="99" nWidth="100" nHeight="5" nCornerRadius="5"></figure>
+                    </item>
+                    <item>
+                        <stack sType="Не задано" sHAlign="right" sVAlign="center" sPivot="middle" nSeparation="10" nPaddingRight="0">
+                            <item>
+                                <stack sType="Не задано" sHAlign="center" sVAlign="center" sPivot="middle">
+                                    <item>
+                                        <stack sType="Не задано" sHAlign="center" sVAlign="center" sPivot="middle" sName="Линия сверху" nPaddingTop="50">
+                                            <item>
+                                                <figure sFigureType="rect" sFillColor="#7C95AB" nWidth="=all_w" nHeight="=all_h*0.13"></figure>
+                                            </item>
+                                        </stack>
+                                    </item>
+                                    <item>
+                                        <stack sType="Не задано" sHAlign="center" sVAlign="center" sPivot="middle" sName="Линия снизу" nPaddingTop="181">
+                                            <item>
+                                                <figure sFigureType="rect" sFillColor="#000000" nWidth="=all_w" nHeight="=all_h*0.13"></figure>
+                                            </item>
+                                        </stack>
+                                    </item>
+                                </stack>
+                            </item>
+                            <item>
+                                <stack sType="h" sHAlign="right" sVAlign="center" sPivot="middle-right" sName="Иконки" nSeparation="=indent_inner" nPaddingLeft="1100" nPaddingTop="25">
+                                    <item>
+                                        <generator sDataSetID="egJuFcTglHlU">
+                                            <item>
+                                                <stack sHAlign="center" sVAlign="center" sPivot="middle-left" sName="main_element">
+                                                    <item>
+                                                        <figure sFigureType="circle" sFillColor="#cccccc" sStrokeColor="#000000" nStrokeWidth="4" nWidth="100" nHeight="100">
+                                                            <onClick>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="cc"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="tab"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="business_block"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamOnline">
+                                                                    <arg sName="code" sValue="tab1"></arg>
+                                                                    <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                                </exec>
+                                                            </onClick>
+                                                        </figure>
+                                                    </item>
+                                                    <item>
+                                                        <image sID="=egJuFcTglHlU.gQESFpgiOW5L" sRepositoryType="image" nWidth="=size_icon" nHeight="=size_icon">
+                                                            <onClick>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="tab"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="cc"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="business_block"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamOnline">
+                                                                    <arg sName="code" sValue="tab1"></arg>
+                                                                    <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                                </exec>
+                                                            </onClick>
+                                                        </image>
+                                                    </item>
+                                                    <item>
+                                                        <stack sType="Не задано" sHAlign="center" sVAlign="center" sPivot="middle" sName="Название" nPaddingTop="155">
+                                                            <item>
+                                                                <stack sType="Не задано" sHAlign="left" sVAlign="center" sPivot="middle" nPaddingTop="0">
+                                                                    <item>
+                                                                        <text sFontSize="default" sText="=egJuFcTglHlU.vEmgcPPeZj6K" sTextColor="ColorWhite" nMaxWidth="60">
+                                                                            <onClick>
+                                                                                <exec sFunction="gdash.setParamFuture">
+                                                                                    <arg sName="code" sValue="tab"></arg>
+                                                                                </exec>
+                                                                                <exec sFunction="gdash.setParamFuture">
+                                                                                    <arg sName="code" sValue="cc"></arg>
+                                                                                </exec>
+                                                                                <exec sFunction="gdash.setParamFuture">
+                                                                                    <arg sName="code" sValue="business_block"></arg>
+                                                                                </exec>
+                                                                                <exec sFunction="gdash.setParamOnline">
+                                                                                    <arg sName="code" sValue="tab1"></arg>
+                                                                                    <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                                                </exec>
+                                                                            </onClick>
+                                                                        </text>
+                                                                    </item>
+                                                                    <onClick>
+                                                                        <exec sFunction="gdash.setParamFuture">
+                                                                            <arg sName="code" sValue="tab"></arg>
+                                                                        </exec>
+                                                                        <exec sFunction="gdash.setParamFuture">
+                                                                            <arg sName="code" sValue="cc"></arg>
+                                                                        </exec>
+                                                                        <exec sFunction="gdash.setParamFuture">
+                                                                            <arg sName="code" sValue="business_block"></arg>
+                                                                        </exec>
+                                                                        <exec sFunction="gdash.setParamOnline">
+                                                                            <arg sName="code" sValue="tab1"></arg>
+                                                                            <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                                        </exec>
+                                                                    </onClick>
+                                                                </stack>
+                                                            </item>
+                                                            <item>
+                                                                <figure sFigureType="rect" sFillColor="=egJuFcTglHlU.kw6xNfItcbIq" sStrokeColor="=egJuFcTglHlU.kw6xNfItcbIq" nStrokeWidth="0" nWidth="=126" nHeight="=all_h*0.13" nCornerRadius="5">
+                                                                    <onClick>
+                                                                        <exec sFunction="gdash.setParamFuture">
+                                                                            <arg sName="code" sValue="tab"></arg>
+                                                                        </exec>
+                                                                        <exec sFunction="gdash.setParamFuture">
+                                                                            <arg sName="code" sValue="cc"></arg>
+                                                                        </exec>
+                                                                        <exec sFunction="gdash.setParamFuture">
+                                                                            <arg sName="code" sValue="business_block"></arg>
+                                                                        </exec>
+                                                                        <exec sFunction="gdash.setParamOnline">
+                                                                            <arg sName="code" sValue="tab1"></arg>
+                                                                            <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                                        </exec>
+                                                                    </onClick>
+                                                                </figure>
+                                                            </item>
+                                                            <onClick>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="tab"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="cc"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamFuture">
+                                                                    <arg sName="code" sValue="business_block"></arg>
+                                                                </exec>
+                                                                <exec sFunction="gdash.setParamOnline">
+                                                                    <arg sName="code" sValue="tab1"></arg>
+                                                                    <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                                </exec>
+                                                            </onClick>
+                                                        </stack>
+                                                    </item>
+                                                    <onClick>
+                                                        <exec sFunction="gdash.setParamFuture">
+                                                            <arg sName="code" sValue="tab"></arg>
+                                                        </exec>
+                                                        <exec sFunction="gdash.setParamFuture">
+                                                            <arg sName="code" sValue="cc"></arg>
+                                                        </exec>
+                                                        <exec sFunction="gdash.setParamFuture">
+                                                            <arg sName="code" sValue="business_block"></arg>
+                                                        </exec>
+                                                        <exec sFunction="gdash.setParamOnline">
+                                                            <arg sName="code" sValue="tab1"></arg>
+                                                            <arg sName="value" sValue="=egJuFcTglHlU.vEmgcPPeZj6K"></arg>
+                                                        </exec>
+                                                    </onClick>
+                                                </stack>
+                                            </item>
+                                        </generator>
+                                    </item>
+                                </stack>
+                            </item>
+                        </stack>
+                    </item>
+                </stack>
+            </item>
+        </designer>
+    </visuals>
+</widget>
