@@ -1,0 +1,7 @@
+<widget nBitMask="1" nIndicatorID="2741000000023" nTotalType="1">
+    <limits>
+        <r sColor="0xff4dca83" sName="" fLowerValue="80" fUpperValue="100" LowerInclude="1" UpperInclude="1"></r>
+        <r sColor="0xfff4515d" sName="" fLowerValue="0" fUpperValue="80" LowerInclude="1" UpperInclude="0"></r>
+    </limits>
+    <filterControl sSourceType="ANALYTIC_DYNAMIC" sSourceName="dtdate"></filterControl>
+</widget>
