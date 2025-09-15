@@ -6,11 +6,11 @@
   - расчет маркетинговых метрик (ДРР, CPO, CPM, CPC, ROMI) и конверсий воронки продаж (CTR, CR1, CR2);
   - построеие дэшборда в BI платформе Navigator.
 
-[**2. Разработка дэшбордов**](https://github.com/Polina-Smirnova22/Dashboards)
-  - Модуль документов (разработан для хранения и использования отчетов бизнеса) [ссылка](https://github.com/Polina-Smirnova22/Dashboards/tree/main/Модуль%20документов) ;
-  - Операторы сотовой связи [ссылка](https://github.com/Polina-Smirnova22/Dashboards/tree/main/Операторы%20сотовой%20связи) ;
-  - Складской учет [ссылка](https://github.com/Polina-Smirnova22/Dashboards/tree/main/Складской%20учет) ;
-  - Управление рабочим временем [ссылка](https://github.com/Polina-Smirnova22/Dashboards/tree/main/Управление%20рабочим%20временем) ;
+[**2. Разработка дэшбордов**](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды)
+  - Модуль документов (разработан для хранения и использования отчетов бизнеса) [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Модуль%20документов) ;
+  - Операторы сотовой связи [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Операторы%20сотовой%20связи) ;
+  - Складской учет [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Складской%20учет) ;
+  - Управление рабочим временем [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/2.%20Дэшборды/Управление%20рабочим%20временем) ;
   - Статистика по онлайн-образованию.
 
 [**3. SQL-анализ (ABC-XYZ) для канцелярских товаров**](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/SQL-анализ%20(ABC-XYZ)%20для%20канцелярских%20товаров)
