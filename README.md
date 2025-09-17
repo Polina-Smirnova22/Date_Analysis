@@ -23,4 +23,8 @@
   - ABC/XYZ анализ;
   - расчет маркетинговых метрик.
 
+[**5. Дизайн A/B-теста по рекламным кампаниям Ozon**](https://github.com/Polina-Smirnova22/Date_Analysis/tree/main/5.%20Дизайн%20AB-теста)
+  - Исследование результатов A/B-теста в Python при помощи библиотек: pandas, matplotlib, seaborn, numpy [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/blob/main/5.%20Дизайн%20AB-теста/3.%20EDA_AB_test.ipynb) ;
+  - Презентация результатов в PowerPoint [ссылка](https://github.com/Polina-Smirnova22/Date_Analysis/blob/main/5.%20Дизайн%20AB-теста/4.%20Презетация%20результатов%20AB-тестов.pdf) .
+
 
